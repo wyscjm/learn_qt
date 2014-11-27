@@ -29,6 +29,7 @@
 
 # Debug Folder
 *build-*
+*.pro.user
 
 # contain file but no folder
 # example: platform/*/
