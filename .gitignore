@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Debug Folder
+*build-*
+
+# contain file but no folder
+# example: platform/*/
