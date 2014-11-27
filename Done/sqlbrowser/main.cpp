@@ -82,7 +82,9 @@ int main(int argc, char *argv[])
     QObject::connect(&browser, SIGNAL(statusMessage(QString)),
                      mainWin.statusBar(), SLOT(showMessage(QString)));
 
+#ifdef Q_OS_WIN
     browser.addConnection("QODBC","DRIVER={SQL SERVER};SERVER=127.0.0.1;DATABASE=DCMS;",NULL,"sa","sa");
+#endif
 
     addConnectionsFromCommandline(app.arguments(), &browser);
     mainWin.show();
